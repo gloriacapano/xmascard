@@ -2,20 +2,20 @@ let bubbles = [];
 let numBubbles = 30;
 
 function setup(){
-  createCanvas(720, 400);
+  createCanvas(windowWidth, windowHeight);
   initBubbles();
 }
 
 function draw(){
- background(0);
- drawBubbles();
- moveBubble();
+   background(0);
+   drawBubbles();
+   moveBubbles();
  }
 
 class Bubble{
-  constructor(){
-  this.x = x;
-  this.y = y; 
+  constructor(x, y){
+    this.x = x;
+    this.y = y;
   }
   display(){
     fill(255);
@@ -24,19 +24,20 @@ class Bubble{
   }
   move(){
     this.x = this.x + random(-1, 1);
-    this.y = this.y -1; 
+    this.y = this.y - 1;
   }
 }
 
 
-function initBubble(){
+function initBubbles(){
   bubbles = [];
   for (let i=0; i < numBubbles; i++){
     let x = random(width);
     let y = height;
+    let bubble = new Bubble(x,y);
+    bubbles.push(bubble);
   }
-  let bubble = new Bubble(x,y);
-  bubbles.push(bubble);
+ 
 }
 
 //function mousePressed() {
