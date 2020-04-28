@@ -1,4 +1,4 @@
 # xmascard
 Interactive Christmas cards done with Processing.js
 
-To know more, read the Wiki.
+Instruction for tutorial in the [Wiki] (https://github.com/gloriacapano/xmascard/wiki)
